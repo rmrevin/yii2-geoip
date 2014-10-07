@@ -33,7 +33,7 @@ class HostInfo extends \yii\base\Component
         }
 
         if (empty($this->host)) {
-            $this->host = \Yii::$app->request->userHost;
+            $this->host = \Yii::$app->request->userIP;
         }
 
         try {
