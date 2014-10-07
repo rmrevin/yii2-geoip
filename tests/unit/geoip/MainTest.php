@@ -50,6 +50,7 @@ class MainTest extends TestCase
     }
 
     /**
+     * @param string|bool $host
      * @return \rmrevin\yii\geoip\HostInfo
      * @throws \yii\base\InvalidConfigException
      */
