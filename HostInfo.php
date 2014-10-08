@@ -25,11 +25,11 @@ class HostInfo extends \yii\base\Component
         parent::init();
 
         if (!geoip_db_avail(GEOIP_COUNTRY_EDITION)) {
-            \Yii::error(\Yii::t('yii', 'GeoIP country database not available.'));
+            \Yii::error(\Yii::t('yii', 'GeoIP country database not available.'), 'rmrevin\yii\geoip\HostInfo');
         }
 
         if (!geoip_db_avail(GEOIP_CITY_EDITION_REV0) && !geoip_db_avail(GEOIP_CITY_EDITION_REV1)) {
-            \Yii::error(\Yii::t('yii', 'GeoIP city database not available.'));
+            \Yii::error(\Yii::t('yii', 'GeoIP city database not available.'), 'rmrevin\yii\geoip\HostInfo');
         }
 
         if (empty($this->host)) {
