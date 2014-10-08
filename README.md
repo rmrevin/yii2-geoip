@@ -7,7 +7,7 @@ Add in `composer.json`:
 ```
 {
     "require": {
-        "rmrevin/yii2-geoip": "1.0.3"
+        "rmrevin/yii2-geoip": "1.0.4"
     }
 }
 ```
