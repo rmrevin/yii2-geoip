@@ -17,11 +17,10 @@ class MainTest extends TestCase
 
     public function testMain()
     {
-        $Info = $this->getInstance('68.171.218.222');
-
+        $Info = $this->getInstance('192.30.252.131');
         $this->assertInstanceOf('\rmrevin\yii\geoip\HostInfo', $Info);
         $this->assertTrue($Info->isAvailable());
-        $this->assertEquals('68.171.218.222', $Info->host);
+        $this->assertEquals('192.30.252.131', $Info->host);
         $this->assertNotEmpty($Info->getData());
 
         $Info = $this->getInstance('127.0.0.1');
@@ -32,21 +31,21 @@ class MainTest extends TestCase
 
     public function testData()
     {
-        $Info = $this->getInstance('phptime.ru');
+        $Info = $this->getInstance('github.com');
 
         $this->assertEquals('NA', $Info->getContinentCode());
         $this->assertEquals('US', $Info->getCountryCode());
         $this->assertEquals('USA', $Info->getCountryCode3());
         $this->assertEquals('United States', $Info->getCountryName());
-        $this->assertEquals('MI', $Info->getRegion());
-        $this->assertEquals('Michigan', $Info->getRegionName());
-        $this->assertEquals('Southfield', $Info->getCity());
-        $this->assertEquals(48075, $Info->getPostalCode());
-        $this->assertEquals(42.465000152588, $Info->getLatitude());
-        $this->assertEquals(-83.230697631836, $Info->getLongitude());
-        $this->assertEquals(505, $Info->getDmaCode());
-        $this->assertEquals(248, $Info->getAreaCode());
-        $this->assertEquals('America/New_York', $Info->getTimeZone());
+        $this->assertEquals('CA', $Info->getRegion());
+        $this->assertEquals('California', $Info->getRegionName());
+        $this->assertEquals('San Francisco', $Info->getCity());
+        $this->assertEquals(94107, $Info->getPostalCode());
+        $this->assertEquals(37.76969909668, $Info->getLatitude());
+        $this->assertEquals(-122.39330291748, $Info->getLongitude());
+        $this->assertEquals(807, $Info->getDmaCode());
+        $this->assertEquals(415, $Info->getAreaCode());
+        $this->assertEquals('America/Los_Angeles', $Info->getTimeZone());
     }
 
     /**
