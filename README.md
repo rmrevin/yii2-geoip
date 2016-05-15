@@ -3,6 +3,8 @@ GeoIP helper for Yii2
 
 Installation
 ------------
+Install `[php5-geoip](http://php.net/manual/ru/geoip.setup.php)` extension.
+
 Add in `composer.json`:
 ```
 {
