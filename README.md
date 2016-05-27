@@ -9,7 +9,7 @@ Add in `composer.json`:
 ```
 {
     "require": {
-        "rmrevin/yii2-geoip": "1.0.4"
+        "rmrevin/yii2-geoip": "~1.1"
     }
 }
 ```
@@ -48,3 +48,9 @@ $Info->getDmaCode();       // 505
 $Info->getAreaCode();      // 248
 $Info->getTimeZone();      // America/New_York
 ```
+
+FAQ
+---
+
+Q: I get error `Required database not available at /usr/share/GeoIP/GeoIPCity.dat.`. What to do?
+A: Download this file [http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`

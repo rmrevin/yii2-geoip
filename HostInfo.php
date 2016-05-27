@@ -6,6 +6,8 @@
 
 namespace rmrevin\yii\geoip;
 
+use yii\base\Exception;
+
 /**
  * Class HostInfo
  * @package rmrevin\yii\geoip
@@ -25,22 +27,14 @@ class HostInfo extends \yii\base\Component
         parent::init();
 
         if (!geoip_db_avail(GEOIP_COUNTRY_EDITION)) {
-            \Yii::error(\Yii::t('yii', 'GeoIP country database not available.'), __METHOD__);
-        }
-
-        if (!geoip_db_avail(GEOIP_CITY_EDITION_REV0) && !geoip_db_avail(GEOIP_CITY_EDITION_REV1)) {
-            \Yii::error(\Yii::t('yii', 'GeoIP city database not available.'), __METHOD__);
+            throw new Exception('GeoIP country database not available.');
         }
 
         if (empty($this->host)) {
             $this->host = \Yii::$app->request->userIP;
         }
 
-        try {
-            $this->data = geoip_record_by_name($this->host);
-        } catch (\yii\base\ErrorException $E) {
-            \Yii::error($E->getMessage(), __METHOD__);
-        }
+        $this->data = geoip_record_by_name($this->host);
     }
 
     /**
