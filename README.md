@@ -52,5 +52,6 @@ $Info->getTimeZone();      // America/New_York
 FAQ
 ---
 
-Q: I get error `Required database not available at /usr/share/GeoIP/GeoIPCity.dat.`. What to do?
-A: Download this file [http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`
+__Q__: I get error `Required database not available at /usr/share/GeoIP/GeoIPCity.dat.`. What to do?
+
+__A__: Download this file [http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`
