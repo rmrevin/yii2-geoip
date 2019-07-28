@@ -1,6 +1,11 @@
 GeoIP helper for Yii2
 ===============================
 
+DEPRECATED
+----------
+This package is no longer supported because MaxMind no longer supports the correct version of the database.
+Use official package [geoip2/geoip2](http://maxmind.github.io/GeoIP2-php/).
+
 Installation
 ------------
 Install [`php5-geoip`](http://php.net/manual/ru/geoip.setup.php) extension.
@@ -54,4 +59,4 @@ FAQ
 
 __Q__: I get error `Required database not available at /usr/share/GeoIP/GeoIPCity.dat.`. What to do?
 
-__A__: Download this file [http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`
+__A__: Download this file (this file [is no more available](https://support.maxmind.com/geolite-legacy-discontinuation-notice/)) http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz and ungzip it into `/usr/share/GeoIP/GeoIPCity.dat`
